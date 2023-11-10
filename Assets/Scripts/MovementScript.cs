@@ -21,13 +21,20 @@ public class MovementScript : MonoBehaviour
     public float wallJumpingTime = 0.2f;
     private float wallJumpingCounter;
     public float wallJumpingDuration = 0.4f;
-    private Vector2 wallJumpingPower = new Vector2(8f, 16f);
+    public float wallPowerX;
+    public float wallPowerY;
+    private Vector2 wallJumpingPower = new Vector2(0f, 0f);
 
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
     [SerializeField] private Transform wallCheck;
     [SerializeField] private LayerMask wallLayer;
+
+    private void Start()
+    {
+       wallJumpingPower = new Vector2(wallPowerX, wallPowerY);
+    }
 
     // Update is called once per frame
     void Update()
@@ -145,5 +152,6 @@ public class MovementScript : MonoBehaviour
     private void StopWallJumping()
     {
         isWallJumping = false;
+        doubleJump = true;
     }
 }
