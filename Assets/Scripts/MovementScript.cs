@@ -25,21 +25,30 @@ public class MovementScript : MonoBehaviour
     public float wallPowerY;
     private Vector2 wallJumpingPower = new Vector2(0f, 0f);
 
+    private BoxCollider2D coll;
+
     [SerializeField] private Rigidbody2D rb;
-    [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
-    [SerializeField] private Transform wallCheck;
     [SerializeField] private LayerMask wallLayer;
 
     private void Start()
     {
        wallJumpingPower = new Vector2(wallPowerX, wallPowerY);
+        coll = GetComponent<BoxCollider2D>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        horizontal = Input.GetAxisRaw("Horizontal");
+
+        if (!isWallJumping)
+        {
+            horizontal = Input.GetAxisRaw("Horizontal");
+        }
+        else
+        {
+            horizontal = 0f;
+        }
 
         if (IsGrounded() && !Input.GetButton("Jump"))
         {
@@ -92,12 +101,12 @@ public class MovementScript : MonoBehaviour
     }
     private bool IsGrounded()
     {
-        return Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
+        return Physics2D.BoxCast(coll.bounds.center, coll.bounds.size, 0f, Vector2.down, 0.1f, groundLayer);
     }
 
     private bool isWalled()
     {
-        return Physics2D.OverlapCircle(wallCheck.position, 0.2f, wallLayer);
+        return Physics2D.BoxCast(coll.bounds.center, coll.bounds.size, 0f, Vector2.right, 0.1f, wallLayer);
     }
 
     private void WallSlide()
