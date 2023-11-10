@@ -69,8 +69,6 @@ public class MovementScript : MonoBehaviour
         {
             Flip();
         }
-        
-
 
     }
     private void FixedUpdate()
