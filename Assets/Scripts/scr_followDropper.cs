@@ -8,18 +8,20 @@ public class scr_followDropper : MonoBehaviour
 
     [HideInInspector]
     public bool beingHeld = false;
+    public float personalGravity = 1f;
 
     private float moveMultiplier = 10;
     private float jitter = 0.01f;
+    private bool dropped = false;
     private void Update()
     {
         if (beingHeld)
         {
-            gameObject.GetComponent<Rigidbody2D>().gravityScale = 0f;
+            Rigidbody2D rb = GetComponent<Rigidbody2D>();
+            rb.gravityScale = 0f;
             Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             Vector3 myPos = transform.position;
             Vector3 posDiff = mousePos - myPos;
-            Rigidbody2D rb = GetComponent<Rigidbody2D>();
 
 
             if (Mathf.Abs((myPos.x - mousePos.x)) > jitter)
@@ -34,13 +36,19 @@ public class scr_followDropper : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "DropTrigger" && !Input.GetMouseButton(0))
         {
-            Debug.Log("DROP");
             beingHeld = false;
+            Rigidbody2D rb = GetComponent<Rigidbody2D>();
+            if (!dropped)
+            {
+                Debug.Log("DROP");
+                rb.velocity = Vector3.zero;
+                dropped = true;
+                rb.gravityScale = personalGravity;
+            }
         }
     }
-
 }

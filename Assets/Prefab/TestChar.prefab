@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 6157158685789273566}
   - component: {fileID: 1106442241071629511}
   - component: {fileID: 7271479096168101244}
+  - component: {fileID: 8831530946681769078}
   m_Layer: 0
   m_Name: TestChar
   m_TagString: Player
@@ -199,3 +200,22 @@ SortingGroup:
   m_SortingLayer: 2
   m_SortingOrder: 0
   m_SortAtRoot: 0
+--- !u!114 &8831530946681769078
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3506815856657716626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94e4dd47f5171124489a3babb678f8e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  platformPrefab: {fileID: 0}
+  numberOfPlatforms: 5
+  respawnTime: 2
+  minX: -5
+  maxX: 5
+  minY: -3
+  maxY: 3

@@ -6,6 +6,8 @@ TagManager:
   tags:
   - HorizontalPlatform
   - DropTrigger
+  - staticPlatBubble
+  - bouncePlatBubble
   layers:
   - Default
   - TransparentFX
