@@ -58,4 +58,15 @@ public class scr_followDropper : MonoBehaviour
             }
         }
     }
+
+    //Colliding with Killzone
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.gameObject.tag == "Killzone")
+        {
+            //Call platform manager
+
+            Destroy(gameObject);
+        }
+    }
 }
