@@ -147,6 +147,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bounceForce: 15
+  audioSource: {fileID: 8237429275263872240, guid: 4528c6801e84e484196e50f2f84a70e2, type: 3}
 --- !u!210 &-7413924417612334024
 SortingGroup:
   m_ObjectHideFlags: 0
@@ -199,3 +200,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   beingHeld: 0
+  gravitySpeed: 1
