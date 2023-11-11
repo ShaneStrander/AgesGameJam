@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2413507564443892657}
   - component: {fileID: 6938594725070661603}
+  - component: {fileID: -6813644861240154770}
   m_Layer: 0
   m_Name: obj_plat_eleHori
   m_TagString: Untagged
@@ -85,6 +86,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!210 &-6813644861240154770
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2114885304564741767}
+  m_Enabled: 1
+  m_SortingLayerID: -1421104013
+  m_SortingLayer: 2
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &3536802399571632747
 GameObject:
   m_ObjectHideFlags: 0

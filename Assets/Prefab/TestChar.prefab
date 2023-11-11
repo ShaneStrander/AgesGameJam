@@ -44,6 +44,7 @@ GameObject:
   - component: {fileID: 9203936389520071131}
   - component: {fileID: 6157158685789273566}
   - component: {fileID: 1106442241071629511}
+  - component: {fileID: 7271479096168101244}
   m_Layer: 0
   m_Name: TestChar
   m_TagString: Untagged
@@ -167,11 +168,9 @@ MonoBehaviour:
   wallPowerX: 36
   wallPowerY: 16
   rb: {fileID: 9203936389520071131}
-  groundCheck: {fileID: 0}
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
-  wallCheck: {fileID: 6186554142521814375}
   wallLayer:
     serializedVersion: 2
     m_Bits: 128
@@ -220,3 +219,15 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 5.12, y: 5.12}
   m_EdgeRadius: 0
+--- !u!210 &7271479096168101244
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3506815856657716626}
+  m_Enabled: 1
+  m_SortingLayerID: -1421104013
+  m_SortingLayer: 2
+  m_SortingOrder: 0
+  m_SortAtRoot: 0

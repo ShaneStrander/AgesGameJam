@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7190212521766829651}
   - component: {fileID: 3074520303351094179}
   - component: {fileID: 196885287124681858}
+  - component: {fileID: -7413924417612334024}
   m_Layer: 6
   m_Name: obj_plat_bounce
   m_TagString: Player
@@ -144,3 +145,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bounceForce: 15
+--- !u!210 &-7413924417612334024
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4604332762521156831}
+  m_Enabled: 1
+  m_SortingLayerID: -1421104013
+  m_SortingLayer: 2
+  m_SortingOrder: 0
+  m_SortAtRoot: 0

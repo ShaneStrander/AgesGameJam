@@ -16,8 +16,8 @@ public class scr_invPlatSpawn : MonoBehaviour
     {
         Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         GameObject spawnedPlatform = Instantiate(platformType, mousePos, Quaternion.identity);
-        Debug.Log("SPAAWNED");
-
+        spawnedPlatform.GetComponent<scr_followDropper>().beingHeld = true;
+        
         return spawnedPlatform;
     }
 }
