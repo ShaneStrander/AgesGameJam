@@ -185,3 +185,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   beingHeld: 0
+  personalGravity: 1

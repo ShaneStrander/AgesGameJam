@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MovementScript : MonoBehaviour
 {
-
+    public GameObject audioSource;
     private float horizontal;
     public float speed = 8f;
     public float jumpingPower = 16f;
@@ -70,6 +70,7 @@ public class MovementScript : MonoBehaviour
                 doubleJump = !doubleJump;
 
                 gameObject.transform.SetParent(null);
+                audioSource.GetComponent<scr_soundEffects>().playSound(audioSource.GetComponent<scr_soundEffects>().sfJump);
             }
        
         }
