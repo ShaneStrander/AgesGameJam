@@ -27,6 +27,8 @@ public class MovementScript : MonoBehaviour
 
     private BoxCollider2D coll;
 
+    private Vector3 platformOffset;
+
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private LayerMask groundLayer;
     [SerializeField] private LayerMask wallLayer;
@@ -78,6 +80,8 @@ public class MovementScript : MonoBehaviour
         {
             Flip();
         }
+
+        transform.position = new Vector3(transform.position.x + platformOffset.x, transform.position.y, transform.position.z);
 
     }
     private void FixedUpdate()
@@ -161,4 +165,27 @@ public class MovementScript : MonoBehaviour
         isWallJumping = false;
         doubleJump = true;
     }
+
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("HorizontalPlatform"))
+        {
+            // Calculate the initial offset when the player lands on the platform
+            platformOffset = transform.position - collision.transform.position;
+
+            // Set the platform as the parent of the player
+            transform.parent = collision.transform;
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("HorizontalPlatform"))
+        {
+            // Reset the player's parent when leaving the platform
+            transform.parent = null;
+        }
+    }
+
 }

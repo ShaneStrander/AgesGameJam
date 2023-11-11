@@ -7,32 +7,55 @@ public class scr_platTimer : MonoBehaviour
     private bool playerOnPlatform = false;
     private float disappearTime = 1f;
     private float elapsedTime = 0f;
+    private bool hasBeenTouched = false;
+    private float t;
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private BoxCollider2D coll;
+
+    [SerializeField] private LayerMask playerLayer;
+
+    private void Start()
     {
-        if (collision.gameObject.CompareTag("Player"))
-        {
-            playerOnPlatform = true;
-            ChangeColor();
-            Invoke("DisappearPlatform", disappearTime);
-        }
+        coll = GetComponent<BoxCollider2D>();
+        GetComponent<SpriteRenderer>().color = Color.white;
+    }
+
+
+    private bool detectPlayer()
+    {
+        return Physics2D.BoxCast(coll.bounds.center, coll.bounds.size, 0f, Vector2.up, 0.1f, playerLayer);
     }
 
     private void Update()
     {
-        if (playerOnPlatform)
+        if (detectPlayer())
+        {
+            //ChangeColor();
+            hasBeenTouched = true;
+
+            Invoke("DisappearPlatform", disappearTime);
+          
+                
+        }
+        if(hasBeenTouched)
         {
             elapsedTime += Time.deltaTime;
-            float t = Mathf.Clamp01(elapsedTime / disappearTime);
+            t = Mathf.Clamp01(elapsedTime / disappearTime);
             Color lerpedColor = Color.Lerp(Color.white, Color.red, t);
             GetComponent<SpriteRenderer>().color = lerpedColor;
         }
+        
     }
 
     private void ChangeColor()
     {
-        // Change the platform color to pink initially
-        GetComponent<SpriteRenderer>().color = Color.white;
+        if (!hasBeenTouched)
+        {
+            Debug.Log("fvsdegnbouivfdrsenubioj");
+            Color lerpedColor = Color.Lerp(Color.white, Color.red, t);
+            GetComponent<SpriteRenderer>().color = lerpedColor;
+            hasBeenTouched = true;
+        }
     }
 
     private void DisappearPlatform()
