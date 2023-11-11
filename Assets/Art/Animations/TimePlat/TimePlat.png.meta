@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 2
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -45,7 +45,7 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 1
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
@@ -126,12 +126,12 @@ TextureImporter:
       name: TimePlat_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 300
-        height: 300
+        x: 53
+        y: 100
+        width: 201
+        height: 76
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -147,13 +147,13 @@ TextureImporter:
       name: TimePlat_1
       rect:
         serializedVersion: 2
-        x: 300
-        y: 0
-        width: 300
-        height: 300
+        x: 354
+        y: 100
+        width: 202
+        height: 76
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 75, y: 0, z: 75, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -168,13 +168,13 @@ TextureImporter:
       name: TimePlat_2
       rect:
         serializedVersion: 2
-        x: 600
-        y: 0
-        width: 300
-        height: 300
+        x: 654
+        y: 100
+        width: 202
+        height: 76
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 75, y: 0, z: 75, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -189,12 +189,12 @@ TextureImporter:
       name: TimePlat_3
       rect:
         serializedVersion: 2
-        x: 900
-        y: 0
-        width: 300
-        height: 300
+        x: 954
+        y: 100
+        width: 202
+        height: 76
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -210,12 +210,12 @@ TextureImporter:
       name: TimePlat_4
       rect:
         serializedVersion: 2
-        x: 1200
-        y: 0
-        width: 300
-        height: 300
+        x: 1254
+        y: 100
+        width: 202
+        height: 76
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -231,12 +231,12 @@ TextureImporter:
       name: TimePlat_5
       rect:
         serializedVersion: 2
-        x: 1500
-        y: 0
-        width: 300
-        height: 300
+        x: 1553
+        y: 100
+        width: 204
+        height: 76
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -252,12 +252,12 @@ TextureImporter:
       name: TimePlat_6
       rect:
         serializedVersion: 2
-        x: 1800
-        y: 0
-        width: 300
-        height: 300
+        x: 1853
+        y: 100
+        width: 202
+        height: 76
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -273,12 +273,12 @@ TextureImporter:
       name: TimePlat_7
       rect:
         serializedVersion: 2
-        x: 2100
-        y: 0
-        width: 300
-        height: 300
+        x: 2154
+        y: 100
+        width: 203
+        height: 76
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -294,12 +294,12 @@ TextureImporter:
       name: TimePlat_8
       rect:
         serializedVersion: 2
-        x: 2400
-        y: 0
-        width: 300
-        height: 300
+        x: 2453
+        y: 100
+        width: 202
+        height: 76
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -315,12 +315,12 @@ TextureImporter:
       name: TimePlat_9
       rect:
         serializedVersion: 2
-        x: 2700
-        y: 0
-        width: 300
-        height: 300
+        x: 2754
+        y: 100
+        width: 202
+        height: 76
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -336,12 +336,12 @@ TextureImporter:
       name: TimePlat_10
       rect:
         serializedVersion: 2
-        x: 3000
-        y: 0
-        width: 300
-        height: 300
+        x: 3054
+        y: 100
+        width: 202
+        height: 76
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -357,12 +357,12 @@ TextureImporter:
       name: TimePlat_11
       rect:
         serializedVersion: 2
-        x: 3300
-        y: 0
-        width: 300
-        height: 300
+        x: 3355
+        y: 100
+        width: 200
+        height: 76
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
