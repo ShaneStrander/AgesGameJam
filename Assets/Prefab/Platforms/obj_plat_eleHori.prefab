@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6938594725070661603}
   - component: {fileID: -6813644861240154770}
   - component: {fileID: 6030197306714743430}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: obj_plat_eleHori
   m_TagString: HorizontalPlatform
   m_Icon: {fileID: 0}
@@ -138,7 +138,7 @@ GameObject:
   - component: {fileID: 145150866066224096}
   - component: {fileID: 2095826412944371801}
   - component: {fileID: 2962646452798153008}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: platformEleHori
   m_TagString: Untagged
   m_Icon: {fileID: 0}

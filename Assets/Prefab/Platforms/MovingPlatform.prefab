@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 4087609716795528476}
   - component: {fileID: 5431196564970211021}
   - component: {fileID: 7109884134865057000}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: testHoriPlat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -221,6 +221,7 @@ MonoBehaviour:
   posA: {fileID: 5503861049506966105}
   posB: {fileID: 105446405533161191}
   Speed: 4
+  playerMovementScript: {fileID: 0}
 --- !u!114 &7109884134865057000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -234,7 +235,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   beingHeld: 0
-  wallUI: {fileID: 0}
 --- !u!1 &6941865293688499223
 GameObject:
   m_ObjectHideFlags: 0
@@ -244,7 +244,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5503861049506966105}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: posA
   m_TagString: Untagged
   m_Icon: {fileID: 4422084297763085224, guid: 0000000000000000d000000000000000, type: 0}
@@ -275,7 +275,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7020370520274432563}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: MovingPlatform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -309,7 +309,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 105446405533161191}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: posB
   m_TagString: Untagged
   m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
