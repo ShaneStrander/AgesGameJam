@@ -49,8 +49,24 @@ public class scr_followDropper : MonoBehaviour
                 dropped = true;
                 rb.bodyType = RigidbodyType2D.Kinematic;
                 rb.velocity = (new Vector2(rb.velocity.x, -gravitySpeed));
+                if (gameObject.tag == "HorizontalPlatform" || gameObject.tag == "VerticalPlatform")
+                {
+                    gameObject.GetComponentInChildren<MovePlat>().locked = false;
+                    Debug.Log("UNLOCK");
+                }
                 //rb.gravityScale = personalGravity;
             }
+        }
+    }
+
+    //Colliding with Killzone
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.gameObject.tag == "Killzone")
+        {
+            //Call platform manager
+
+            Destroy(gameObject);
         }
     }
 }
