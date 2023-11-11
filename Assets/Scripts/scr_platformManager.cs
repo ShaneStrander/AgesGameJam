@@ -12,6 +12,7 @@ public class scr_platformManager : MonoBehaviour
 
     //public List<GameObject> platforms = new List<GameObject>();
     public List<GameObject> platforms;
+    public GameObject[] counters = new GameObject[5];
 
     public void SpawnCrate()
     {
@@ -25,27 +26,27 @@ public class scr_platformManager : MonoBehaviour
     {
         if (collision.CompareTag("CrateStatic"))
         {
-            //SpawnPlatform(staticPlatform);
+            counters[0].GetComponent<scr_platformInventoryCounter>().AddToInventory();
             Destroy(collision.gameObject);
         }
         else if (collision.CompareTag("CrateBounce"))
         {
-            //SpawnPlatform(bouncePlatform);
+            counters[1].GetComponent<scr_platformInventoryCounter>().AddToInventory();
             Destroy(collision.gameObject);
         }
         else if (collision.CompareTag("CrateTimer"))
         {
-            //SpawnPlatform(timerPlatform);
+            counters[2].GetComponent<scr_platformInventoryCounter>().AddToInventory();
             Destroy(collision.gameObject);
         }
         else if (collision.CompareTag("CrateHoriMove"))
         {
-            //SpawnPlatform(horiMovePlatform);
+            counters[3].GetComponent<scr_platformInventoryCounter>().AddToInventory();
             Destroy(collision.gameObject);
         }
         else if (collision.CompareTag("CrateVertMove"))
         {
-            //SpawnPlatform(vertMovePlatform);
+            counters[4].GetComponent<scr_platformInventoryCounter>().AddToInventory();
             Destroy(collision.gameObject);
         }
 

@@ -246,6 +246,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   beingHeld: 0
   gravitySpeed: 1
+  platformManager: {fileID: 3506815856657716626, guid: c2eeb51855ea9024f9bd1ece22e77c40, type: 3}
 --- !u!61 &3179841586250561143
 BoxCollider2D:
   m_ObjectHideFlags: 0

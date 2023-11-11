@@ -10,6 +10,12 @@ TagManager:
   - bouncePlatBubble
   - timerPlatBubble
   - VerticalPlatform
+  - CrateVertMove
+  - CrateBounce
+  - CrateStatic
+  - CrateHoriMove
+  - CrateTimer
+  - KillZone
   layers:
   - Default
   - TransparentFX
