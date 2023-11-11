@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: fc43e5e3fc4b203439665a9ba2b6f5e7
+guid: 1576e28a318b4b6498939d48ebb9f016
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -123,13 +123,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: JumpPlat_0
+      name: NewTimePlat_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 300
-        height: 300
+        width: 400
+        height: 400
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,20 +137,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d67808e251a0d3645aee25f782e03a39
-      internalID: 1540977821
+      spriteID: e35a1a440cf22a649ba65fed8903073d
+      internalID: -1529986253
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: JumpPlat_1
+      name: NewTimePlat_1
       rect:
         serializedVersion: 2
-        x: 300
+        x: 400
         y: 0
-        width: 300
-        height: 300
+        width: 400
+        height: 400
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -158,20 +158,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c3cc1f1b77e3d12478f2d3b6c9bb5c1d
-      internalID: 1622585156
+      spriteID: 50510047ac5302246a09c84688164160
+      internalID: -793892451
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: JumpPlat_2
+      name: NewTimePlat_2
       rect:
         serializedVersion: 2
-        x: 600
+        x: 800
         y: 0
-        width: 300
-        height: 300
+        width: 400
+        height: 400
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -179,41 +179,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4deaf1b5c437b304c8d544b076c444ae
-      internalID: -407493261
+      spriteID: 28007cdafe0675442a3956fbcaf30c5a
+      internalID: -1582926949
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: JumpPlat_3
-      rect:
-        serializedVersion: 2
-        x: 900
-        y: 0
-        width: 300
-        height: 300
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c70d4db80f6e81b4bbff774ce64c32e1
-      internalID: -1009148123
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: JumpPlat_4
+      name: NewTimePlat_3
       rect:
         serializedVersion: 2
         x: 1200
         y: 0
-        width: 300
-        height: 300
+        width: 400
+        height: 400
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -221,8 +200,155 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 882c4972974a6824dbdaf760f1bf4d99
-      internalID: -1777709313
+      spriteID: d33a7ba562e89c54e8496fb028ae0c2d
+      internalID: 459040411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewTimePlat_4
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 0
+        width: 400
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 286ae8e260d224d4cb41b37769fd9b20
+      internalID: -606160762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewTimePlat_5
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 0
+        width: 400
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ab95f9e7a8903b43b22176eeae2e308
+      internalID: -2143306528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewTimePlat_6
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 0
+        width: 400
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4262b499ae164a40befedcdcf799948
+      internalID: 118837425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewTimePlat_7
+      rect:
+        serializedVersion: 2
+        x: 2800
+        y: 0
+        width: 400
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ec995b1cea172f44af7667d2547107a
+      internalID: 1782134609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewTimePlat_8
+      rect:
+        serializedVersion: 2
+        x: 3200
+        y: 0
+        width: 400
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33f7b2f68adb5214aad85a717e5cbd07
+      internalID: 316984994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewTimePlat_9
+      rect:
+        serializedVersion: 2
+        x: 3600
+        y: 0
+        width: 400
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5abf2c6f5f8c7054e8e5ffea31441701
+      internalID: -1111787247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewTimePlat_10
+      rect:
+        serializedVersion: 2
+        x: 4000
+        y: 0
+        width: 400
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 030292f618db982438b25cfec0e6112d
+      internalID: 1912324394
       vertices: []
       indices: 
       edges: []
@@ -238,11 +364,17 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      JumpPlat_0: 1540977821
-      JumpPlat_1: 1622585156
-      JumpPlat_2: -407493261
-      JumpPlat_3: -1009148123
-      JumpPlat_4: -1777709313
+      NewTimePlat_0: -1529986253
+      NewTimePlat_1: -793892451
+      NewTimePlat_10: 1912324394
+      NewTimePlat_2: -1582926949
+      NewTimePlat_3: 459040411
+      NewTimePlat_4: -606160762
+      NewTimePlat_5: -2143306528
+      NewTimePlat_6: 118837425
+      NewTimePlat_7: 1782134609
+      NewTimePlat_8: 316984994
+      NewTimePlat_9: -1111787247
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
