@@ -9,6 +9,7 @@ public class scr_followDropper : MonoBehaviour
     [HideInInspector]
     public bool beingHeld = false;
     public float gravitySpeed = 1f;
+    public GameObject platformManager;
 
     private float moveMultiplier = 10;
     private float jitter = 0.01f;
@@ -48,7 +49,7 @@ public class scr_followDropper : MonoBehaviour
                 rb.velocity = Vector3.zero;
                 dropped = true;
                 rb.bodyType = RigidbodyType2D.Kinematic;
-                rb.velocity = (new Vector2(rb.velocity.x, -gravitySpeed));
+                rb.velocity = (new Vector2(rb.velocity.x, -gravitySpeed*10));
                 if (gameObject.tag == "HorizontalPlatform" || gameObject.tag == "VerticalPlatform")
                 {
                     gameObject.GetComponentInChildren<MovePlat>().locked = false;
@@ -62,10 +63,10 @@ public class scr_followDropper : MonoBehaviour
     //Colliding with Killzone
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.tag == "Killzone")
+        if(collision.gameObject.tag == "KillZone")
         {
-            //Call platform manager
-
+            //Call platform manager spawn crate
+            platformManager.GetComponent<scr_platformManager>().SpawnCrate();
             Destroy(gameObject);
         }
     }

@@ -4,73 +4,51 @@ using UnityEngine;
 
 public class scr_platformManager : MonoBehaviour
 {
-    public GameObject staticPlatform;
-    public GameObject bouncePlatform;
-    public GameObject timerPlatform; 
-    public GameObject horiMovePlatform; 
-    public GameObject vertMovePlatform; 
-    public int numberOfPlatforms = 5;     // The initial number of platforms
-    public float respawnTime = 2f;        // Time in seconds before respawning a platform
+    
     public float minX = -5f;              // Minimum X position for respawn
     public float maxX = 5f;               // Maximum X position for respawn
     public float minY = -3f;              // Minimum Y position for respawn
     public float maxY = 3f;               // Maximum Y position for respawn
 
-    private List<GameObject> platforms = new List<GameObject>();
+    //public List<GameObject> platforms = new List<GameObject>();
+    public List<GameObject> platforms;
+    public GameObject[] counters = new GameObject[5];
 
-    void Start()
+    public void SpawnCrate()
     {
-        // Spawn initial platforms
-        //SpawnPlatforms();
-    }
+        int randomizer = Random.Range(0, platforms.Count);
 
-    void SpawnPlatform(GameObject selectedPrefab)
-    {
-        // Choose a random platform prefab
-        //GameObject selectedPrefab = platformPrefabs[Random.Range(0, platformPrefabs.Length)];
-
-        // Instantiate the selected platform prefab at a random position
         Vector2 spawnPosition = new Vector2(Random.Range(minX, maxX), Random.Range(minY, maxY));
-        GameObject platform = Instantiate(selectedPrefab, spawnPosition, Quaternion.identity);
-        //platforms.Add(platform);
-    
-    }
-
-    void Update()
-    {
-        // Check if you want to respawn a platform (e.g., when a platform is destroyed)
-        // For demonstration purposes, I'm using the space key as a trigger. You can replace it with your own condition.
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-        }
+        GameObject platform = Instantiate(platforms[randomizer], spawnPosition, Quaternion.identity);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("CrateStatic"))
         {
-            SpawnPlatform(staticPlatform);
+            counters[0].GetComponent<scr_platformInventoryCounter>().AddToInventory();
             Destroy(collision.gameObject);
         }
-        if (collision.CompareTag("CrateBounce"))
+        else if (collision.CompareTag("CrateBounce"))
         {
-            SpawnPlatform(bouncePlatform);
+            counters[1].GetComponent<scr_platformInventoryCounter>().AddToInventory();
             Destroy(collision.gameObject);
         }
-        if (collision.CompareTag("CrateTimer"))
+        else if (collision.CompareTag("CrateTimer"))
         {
-            SpawnPlatform(timerPlatform);
+            counters[2].GetComponent<scr_platformInventoryCounter>().AddToInventory();
             Destroy(collision.gameObject);
         }
-        if (collision.CompareTag("CrateHoriMove"))
+        else if (collision.CompareTag("CrateHoriMove"))
         {
-            SpawnPlatform(horiMovePlatform);
+            counters[3].GetComponent<scr_platformInventoryCounter>().AddToInventory();
             Destroy(collision.gameObject);
         }
-        if (collision.CompareTag("CrateVertMove"))
+        else if (collision.CompareTag("CrateVertMove"))
         {
-            SpawnPlatform(vertMovePlatform);
+            counters[4].GetComponent<scr_platformInventoryCounter>().AddToInventory();
             Destroy(collision.gameObject);
         }
+
     }
 }
