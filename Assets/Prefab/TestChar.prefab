@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6157158685789273566}
   - component: {fileID: 1106442241071629511}
   - component: {fileID: 7271479096168101244}
-  - component: {fileID: 8831530946681769078}
+  - component: {fileID: 8782663629812699578}
   m_Layer: 0
   m_Name: TestChar
   m_TagString: Player
@@ -201,7 +201,7 @@ SortingGroup:
   m_SortingLayer: 2
   m_SortingOrder: 0
   m_SortAtRoot: 0
---- !u!114 &8831530946681769078
+--- !u!114 &8782663629812699578
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -213,14 +213,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94e4dd47f5171124489a3babb678f8e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  staticPlatform: {fileID: 9085122686891823339, guid: 338b346436d3f8249877af38470ccc24, type: 3}
-  bouncePlatform: {fileID: 4604332762521156831, guid: 43c49aee1e760654aa48c8c5a605f553, type: 3}
-  timerPlatform: {fileID: 2426936816135150697, guid: 851ce277d67769d40b6a3295a40280d3, type: 3}
-  horiMovePlatform: {fileID: 834663745621048835, guid: ec2f21dbcb2fdfe47bcfd5347a0fdb81, type: 3}
-  vertMovePlatform: {fileID: 4560719778119555167, guid: ead3308e80f2bb648a1ecc4adc892af4, type: 3}
-  numberOfPlatforms: 5
-  respawnTime: 2
   minX: -5
   maxX: 5
   minY: -3
   maxY: 3
+  platforms:
+  - {fileID: 6196986851997307043, guid: 15cfdfed586be3a49bd3fbf9de21535f, type: 3}
+  - {fileID: 6243791668479446374, guid: ada8affb90e10664b884aab1bbb30f30, type: 3}
+  - {fileID: 7668327067469046719, guid: b147e6425d0f88046b2b0f45c1b4d953, type: 3}
+  - {fileID: 2607030981203539571, guid: 478bff545953b5e409b661af112b8c9c, type: 3}
+  - {fileID: 7245085542615980047, guid: a1d62656551d0cc47b7b760a5b7ff0a5, type: 3}
