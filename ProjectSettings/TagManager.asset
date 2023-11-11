@@ -16,6 +16,7 @@ TagManager:
   - CrateHoriMove
   - CrateTimer
   - KillZone
+  - CrateWall
   layers:
   - Default
   - TransparentFX
