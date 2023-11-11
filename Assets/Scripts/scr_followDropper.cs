@@ -8,7 +8,7 @@ public class scr_followDropper : MonoBehaviour
 
     [HideInInspector]
     public bool beingHeld = false;
-    public float personalGravity = 1f;
+    public float gravitySpeed = 1f;
 
     private float moveMultiplier = 10;
     private float jitter = 0.01f;
@@ -47,7 +47,9 @@ public class scr_followDropper : MonoBehaviour
                 Debug.Log("DROP");
                 rb.velocity = Vector3.zero;
                 dropped = true;
-                rb.gravityScale = personalGravity;
+                rb.bodyType = RigidbodyType2D.Kinematic;
+                rb.velocity = (new Vector2(rb.velocity.x, -gravitySpeed));
+                //rb.gravityScale = personalGravity;
             }
         }
     }
