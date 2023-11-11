@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: WallSlideAnim
+  m_Name: JumpPlatAnim
   serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
@@ -21,9 +21,13 @@ AnimationClip:
   - serializedVersion: 2
     curve:
     - time: 0
-      value: {fileID: -1204408612, guid: 4b5fcfc027ae8854f92128da7e10ff58, type: 3}
+      value: {fileID: -929069683, guid: 42fb391a87486d04a82833af7b805af3, type: 3}
     - time: 0.083333336
-      value: {fileID: 1521145128, guid: 4b5fcfc027ae8854f92128da7e10ff58, type: 3}
+      value: {fileID: 1988628779, guid: 42fb391a87486d04a82833af7b805af3, type: 3}
+    - time: 0.16666667
+      value: {fileID: -553907305, guid: 42fb391a87486d04a82833af7b805af3, type: 3}
+    - time: 0.25
+      value: {fileID: 959831623, guid: 42fb391a87486d04a82833af7b805af3, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -46,14 +50,16 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     pptrCurveMapping:
-    - {fileID: -1204408612, guid: 4b5fcfc027ae8854f92128da7e10ff58, type: 3}
-    - {fileID: 1521145128, guid: 4b5fcfc027ae8854f92128da7e10ff58, type: 3}
+    - {fileID: -929069683, guid: 42fb391a87486d04a82833af7b805af3, type: 3}
+    - {fileID: 1988628779, guid: 42fb391a87486d04a82833af7b805af3, type: 3}
+    - {fileID: -553907305, guid: 42fb391a87486d04a82833af7b805af3, type: 3}
+    - {fileID: 959831623, guid: 42fb391a87486d04a82833af7b805af3, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.16666667
+    m_StopTime: 0.33333334
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
