@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 5946142674873551113}
   - component: {fileID: 8676934133803113607}
   - component: {fileID: -2079479193253036542}
-  - component: {fileID: 2813508275854046804}
   - component: {fileID: 6351457058715357007}
+  - component: {fileID: 4569813380853670646}
   m_Layer: 6
   m_Name: obj_plat_timer
   m_TagString: Player
@@ -161,19 +161,6 @@ SortingGroup:
   m_SortingLayer: 2
   m_SortingOrder: 0
   m_SortAtRoot: 0
---- !u!114 &2813508275854046804
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2426936816135150697}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bdc80a9bddc592c49955a91b12e57ce4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  beingHeld: 0
 --- !u!50 &6351457058715357007
 Rigidbody2D:
   serializedVersion: 4
@@ -201,3 +188,17 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &4569813380853670646
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2426936816135150697}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bdc80a9bddc592c49955a91b12e57ce4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  beingHeld: 0
+  wallUI: {fileID: 0}

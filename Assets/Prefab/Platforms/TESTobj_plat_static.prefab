@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 6351054975057148414}
   - component: {fileID: 5895722824713553615}
   - component: {fileID: 8496285678125325982}
-  - component: {fileID: 1063164464660714991}
   - component: {fileID: 8266598567618308347}
+  - component: {fileID: 5931893174362634843}
   m_Layer: 6
   m_Name: TESTobj_plat_static
   m_TagString: Untagged
@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 9085122686891823339}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.56, y: -2.97, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 4.0370197, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -145,20 +145,6 @@ SortingGroup:
   m_SortingLayer: 2
   m_SortingOrder: 0
   m_SortAtRoot: 0
---- !u!114 &1063164464660714991
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9085122686891823339}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bdc80a9bddc592c49955a91b12e57ce4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  beingHeld: 0
-  moveMultiplier: 10
 --- !u!50 &8266598567618308347
 Rigidbody2D:
   serializedVersion: 4
@@ -186,3 +172,17 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &5931893174362634843
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9085122686891823339}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bdc80a9bddc592c49955a91b12e57ce4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  beingHeld: 0
+  wallUI: {fileID: 7383285255431878364, guid: feae1bbfd13b4d34bb2e4d2b44dee7cd, type: 3}

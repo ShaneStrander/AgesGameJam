@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 2413507564443892657}
   - component: {fileID: 6938594725070661603}
   - component: {fileID: -6813644861240154770}
-  - component: {fileID: -2646300853632086784}
   - component: {fileID: 6030197306714743430}
   m_Layer: 0
   m_Name: obj_plat_eleHori
@@ -100,19 +99,6 @@ SortingGroup:
   m_SortingLayer: 2
   m_SortingOrder: 0
   m_SortAtRoot: 0
---- !u!114 &-2646300853632086784
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2114885304564741767}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bdc80a9bddc592c49955a91b12e57ce4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  beingHeld: 0
 --- !u!50 &6030197306714743430
 Rigidbody2D:
   serializedVersion: 4

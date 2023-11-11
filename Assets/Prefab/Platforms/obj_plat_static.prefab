@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 6351054975057148414}
   - component: {fileID: 5895722824713553615}
   - component: {fileID: 8496285678125325982}
-  - component: {fileID: 7102347451686564451}
   - component: {fileID: -5401815301483729407}
+  - component: {fileID: 668752447638277719}
   m_Layer: 6
   m_Name: obj_plat_static
   m_TagString: Untagged
@@ -145,19 +145,6 @@ SortingGroup:
   m_SortingLayer: 2
   m_SortingOrder: 0
   m_SortAtRoot: 0
---- !u!114 &7102347451686564451
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9085122686891823339}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bdc80a9bddc592c49955a91b12e57ce4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  beingHeld: 0
 --- !u!50 &-5401815301483729407
 Rigidbody2D:
   serializedVersion: 4
@@ -185,3 +172,17 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &668752447638277719
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9085122686891823339}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bdc80a9bddc592c49955a91b12e57ce4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  beingHeld: 0
+  wallUI: {fileID: 0}
