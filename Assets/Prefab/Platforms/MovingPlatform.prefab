@@ -104,7 +104,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -221,6 +221,7 @@ MonoBehaviour:
   posA: {fileID: 5503861049506966105}
   posB: {fileID: 105446405533161191}
   Speed: 4
+  playerMovementScript: {fileID: 0}
 --- !u!114 &7109884134865057000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -234,7 +235,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   beingHeld: 0
-  wallUI: {fileID: 0}
 --- !u!1 &6941865293688499223
 GameObject:
   m_ObjectHideFlags: 0
