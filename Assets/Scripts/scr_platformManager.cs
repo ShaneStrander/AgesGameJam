@@ -7,6 +7,8 @@ public class scr_platformManager : MonoBehaviour
     public GameObject staticPlatform;
     public GameObject bouncePlatform;
     public GameObject timerPlatform; 
+    public GameObject horiMovePlatform; 
+    public GameObject vertMovePlatform; 
     public int numberOfPlatforms = 5;     // The initial number of platforms
     public float respawnTime = 2f;        // Time in seconds before respawning a platform
     public float minX = -5f;              // Minimum X position for respawn
@@ -45,19 +47,29 @@ public class scr_platformManager : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("staticPlatBubble"))
+        if (collision.CompareTag("CrateStatic"))
         {
             SpawnPlatform(staticPlatform);
             Destroy(collision.gameObject);
         }
-        if (collision.CompareTag("bouncePlatBubble"))
+        if (collision.CompareTag("CrateBounce"))
         {
             SpawnPlatform(bouncePlatform);
             Destroy(collision.gameObject);
         }
-        if (collision.CompareTag("timerPlatBubble"))
+        if (collision.CompareTag("CrateTimer"))
         {
             SpawnPlatform(timerPlatform);
+            Destroy(collision.gameObject);
+        }
+        if (collision.CompareTag("CrateHoriMove"))
+        {
+            SpawnPlatform(horiMovePlatform);
+            Destroy(collision.gameObject);
+        }
+        if (collision.CompareTag("CrateVertMove"))
+        {
+            SpawnPlatform(vertMovePlatform);
             Destroy(collision.gameObject);
         }
     }
