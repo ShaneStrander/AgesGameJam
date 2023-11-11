@@ -17,7 +17,7 @@ TagManager:
   - UI
   - Ground
   - Wall
-  - 
+  - GameMenu
   - 
   - 
   - 
@@ -50,4 +50,7 @@ TagManager:
     locked: 0
   - name: GameObjects
     uniqueID: 2873863283
+    locked: 0
+  - name: OverlayUI
+    uniqueID: 682177563
     locked: 0
