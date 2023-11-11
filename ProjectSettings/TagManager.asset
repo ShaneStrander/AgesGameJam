@@ -8,6 +8,7 @@ TagManager:
   - DropTrigger
   - staticPlatBubble
   - bouncePlatBubble
+  - timerPlatBubble
   layers:
   - Default
   - TransparentFX

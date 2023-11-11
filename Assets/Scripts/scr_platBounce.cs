@@ -5,7 +5,7 @@ using UnityEngine;
 public class scr_platBounce : MonoBehaviour
 {
     public float bounceForce = 0f;
-
+    public GameObject audioSource;
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
@@ -20,6 +20,8 @@ public class scr_platBounce : MonoBehaviour
                 // Apply the bounce force to the player
                 playerRb.velocity = new Vector2(playerRb.velocity.x, 0f); // Reset vertical velocity
                 playerRb.AddForce(bounceDirection * bounceForce, ForceMode2D.Impulse);
+                gameObject.transform.SetParent(null);
+                audioSource.GetComponent<scr_soundEffects>().playSound(audioSource.GetComponent<scr_soundEffects>().sfJump);
             }
         }
     }
