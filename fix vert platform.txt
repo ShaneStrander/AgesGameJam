@@ -1,0 +1,25 @@
+fix vert platform
+yeeting player don't find script
+crane magnet following the mouse
+
+-Moving platforms fix
+-fix dragging bug in game space
+-Balancing score
+-Death state
+-Playtest
+-Finish game loop
+-starting platform
+-count wallplat
+
+-Add font
+-implement crane sprite
+-implement background sprite
+-Music
+-Animations
+
+
+
+-death crusher of doom sprite
+-Juice
+
+-sfx
