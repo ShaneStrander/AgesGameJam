@@ -8,6 +8,8 @@ public class MovePlat : MonoBehaviour
     public int Speed;
     Vector2 targetPos;
 
+    [SerializeField] private MovementScript playerMovementScript;
+
     void Start()
     {
         targetPos = posB.position;
@@ -21,6 +23,9 @@ public class MovePlat : MonoBehaviour
         if (Vector2.Distance(transform.position, posB.position) < 0.1f) targetPos = posA.position;
 
         transform.position = Vector2.MoveTowards(transform.position, targetPos, Speed * Time.deltaTime);
+
+        Debug.Log(playerMovementScript.speed);
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
