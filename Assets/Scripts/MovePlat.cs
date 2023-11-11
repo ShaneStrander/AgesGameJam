@@ -25,7 +25,6 @@ public class MovePlat : MonoBehaviour
         transform.position = Vector2.MoveTowards(transform.position, targetPos, Speed * Time.deltaTime);
 
     }
-
     private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
