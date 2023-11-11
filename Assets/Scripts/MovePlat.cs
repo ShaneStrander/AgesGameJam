@@ -24,24 +24,13 @@ public class MovePlat : MonoBehaviour
 
         transform.position = Vector2.MoveTowards(transform.position, targetPos, Speed * Time.deltaTime);
 
-        Debug.Log(playerMovementScript.speed);
-
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
-
             collision.transform.SetParent(this.transform);
-        }
-    }
-
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Player"))
-        {
-            collision.transform.SetParent(null);
         }
     }
 }

@@ -46,6 +46,10 @@ public class MovementScript : MonoBehaviour
         if (!isWallJumping)
         {
             horizontal = Input.GetAxisRaw("Horizontal");
+            if (horizontal > 0f || horizontal < 0f)
+            {
+                gameObject.transform.SetParent(null);
+            }
         }
         else
         {
@@ -64,6 +68,8 @@ public class MovementScript : MonoBehaviour
                 rb.velocity = new Vector2(rb.velocity.x, doubleJump ? doubleJumpPower : jumpingPower);
 
                 doubleJump = !doubleJump;
+
+                gameObject.transform.SetParent(null);
             }
        
         }
