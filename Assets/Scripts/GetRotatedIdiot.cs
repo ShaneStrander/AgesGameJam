@@ -5,10 +5,18 @@ using UnityEngine;
 public class GetRotatedIdiot : MonoBehaviour
 {
     public float RotationSpeed = 6f;
+    [SerializeField] private bool inverse;
 
     // Update is called once per frame
     void Update()
     {
-        transform.Rotate(Vector3.forward * (RotationSpeed * Time.deltaTime));
+        if (inverse)
+        {
+            transform.Rotate(Vector3.forward * (RotationSpeed * Time.deltaTime));
+        }
+        else
+        {
+            transform.Rotate(Vector3.forward * -1 * (RotationSpeed * Time.deltaTime));
+        }
     }
 }
