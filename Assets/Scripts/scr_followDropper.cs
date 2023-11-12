@@ -9,8 +9,12 @@ public class scr_followDropper : MonoBehaviour
     [HideInInspector]
     public bool beingHeld = false;
     public bool isStart = false;
-    public float gravitySpeed = 1f;
     public GameObject platformManager;
+    public GameObject score;
+    public GameObject spawner = null;
+
+    public float gravitySpeed = 0.5f;
+    public float dropSpeedMUltiplier = 0.05f;
 
     private float moveMultiplier = 10;
     private float jitter = 0.01f;
@@ -69,7 +73,7 @@ public class scr_followDropper : MonoBehaviour
                 {
                     child.gameObject.layer = 6;
                 }
-                rb.velocity = (new Vector2(rb.velocity.x, -gravitySpeed*1));
+                rb.velocity = (new Vector2(rb.velocity.x, -gravitySpeed * (1 + dropSpeedMUltiplier)));
                 if (gameObject.tag == "HorizontalPlatform" || gameObject.tag == "VerticalPlatform")
                 {
                     gameObject.GetComponentInChildren<MovePlat>().locked = false;
@@ -86,7 +90,12 @@ public class scr_followDropper : MonoBehaviour
         if(collision.gameObject.tag == "KillZone")
         {
             //Call platform manager spawn crate
+            score.GetComponent<scr_score>().score += 100;
             platformManager.GetComponent<scr_platformManager>().SpawnCrate();
+            if (spawner != null)
+            { 
+                spawner.GetComponent<scr_invPlatSpawn>().dropSpeedMultiplier += 1f;
+            }
             Destroy(gameObject);
         }
     }

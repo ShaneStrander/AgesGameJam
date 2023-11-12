@@ -5,14 +5,30 @@ using UnityEngine;
 public class scr_platformManager : MonoBehaviour
 {
     
-    public float minX = -5f;              // Minimum X position for respawn
-    public float maxX = 5f;               // Maximum X position for respawn
-    public float minY = -3f;              // Minimum Y position for respawn
-    public float maxY = 3f;               // Maximum Y position for respawn
+    private float minX;              // Minimum X position for respawn
+    private float maxX;               // Maximum X position for respawn
+    private float minY;              // Minimum Y position for respawn
+    private float maxY;               // Maximum Y position for respawn
 
     //public List<GameObject> platforms = new List<GameObject>();
     public List<GameObject> platforms;
     public GameObject[] counters = new GameObject[6];
+
+    public GameObject boundary;
+
+    void Start()
+    {
+        minX = boundary.transform.position.x - boundary.GetComponent<BoxCollider2D>().bounds.size.x / 2f;
+        maxX = boundary.transform.position.x + boundary.GetComponent<BoxCollider2D>().bounds.size.x / 2f;
+        minY = boundary.transform.position.y - boundary.GetComponent<BoxCollider2D>().bounds.size.y / 2f;
+        maxY = boundary.transform.position.y + boundary.GetComponent<BoxCollider2D>().bounds.size.y / 2f;
+
+        Debug.Log(minX);
+        Debug.Log(maxX);
+        Debug.Log(minY);
+        Debug.Log(maxY);
+
+    }
 
     public void SpawnCrate()
     {
