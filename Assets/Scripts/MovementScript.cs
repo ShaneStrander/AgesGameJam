@@ -34,10 +34,13 @@ public class MovementScript : MonoBehaviour
     [SerializeField] private LayerMask groundLayer;
     [SerializeField] private LayerMask wallLayer;
 
+    private Animator anim;
+
     private void Start()
     {
        wallJumpingPower = new Vector2(wallPowerX, wallPowerY);
         coll = GetComponent<BoxCollider2D>();
+        anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -49,22 +52,36 @@ public class MovementScript : MonoBehaviour
             horizontal = Input.GetAxisRaw("Horizontal");
             if (horizontal > 0f || horizontal < 0f)
             {
+                anim.SetBool("isRunning", true);
                 gameObject.transform.SetParent(null);
+            }
+            else if (horizontal == 0f)
+            {
+                anim.SetBool("isRunning", false);
             }
         }
         else
         {
             horizontal = 0f;
+            anim.SetBool("isRunning", false);
         }
 
         if (IsGrounded() && !Input.GetButton("Jump"))
         {
             doubleJump = false;
+            anim.SetBool("isJumping", false);
+        }
+
+        if (!IsGrounded())
+        {
+            anim.SetBool("isJumping", false);
         }
 
         if (Input.GetButtonDown("Jump"))
         {
-            if(IsGrounded() || doubleJump)
+            anim.SetBool("isJumping", true);
+
+            if (IsGrounded() || doubleJump)
             {
                 rb.velocity = new Vector2(rb.velocity.x, doubleJump ? doubleJumpPower : jumpingPower);
 
