@@ -9,6 +9,7 @@ public class InGameMenuScript : MonoBehaviour
 
     public GameObject BackgroundActivate;
     public GameObject GameMenuActivate;
+    public GameObject Shade;
 
     public void Update()
     {
@@ -27,6 +28,7 @@ public class InGameMenuScript : MonoBehaviour
             Debug.Log("yeehaw");
             GameMenuActivate.SetActive(true);
             BackgroundActivate.SetActive(true);
+            Shade.SetActive(true);
             GameMenuBool = true;
             Time.timeScale = 0;
         }
@@ -34,6 +36,7 @@ public class InGameMenuScript : MonoBehaviour
         {
             GameMenuActivate.SetActive(false);
             BackgroundActivate.SetActive(false);
+            Shade.SetActive(false);
             GameMenuBool = false;
             Time.timeScale = 1;
         }
@@ -53,6 +56,7 @@ public class InGameMenuScript : MonoBehaviour
     {
         GameMenuActivate.SetActive(false);
         BackgroundActivate.SetActive(false);
+        Shade.SetActive(false);
         GameMenuBool = false;
         Time.timeScale = 1;
     }
