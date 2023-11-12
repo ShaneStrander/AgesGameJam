@@ -30,7 +30,8 @@ public class scr_platTimer : MonoBehaviour
     {
         if (detectPlayer())
         {
-            //ChangeColor();
+            //ChangeColor();'
+            Debug.Log("AÖLFJSDA_FL");
             hasBeenTouched = true;
 
             Invoke("DisappearPlatform", disappearTime);

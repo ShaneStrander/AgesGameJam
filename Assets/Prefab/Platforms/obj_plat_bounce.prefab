@@ -146,7 +146,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a07e21790f18e8b449603e890f11d486, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bounceForce: 15
+  bounceForce: 40
   audioSource: {fileID: 8237429275263872240, guid: 4528c6801e84e484196e50f2f84a70e2, type: 3}
 --- !u!210 &-7413924417612334024
 SortingGroup:

@@ -30,7 +30,7 @@ public class scr_followDropper : MonoBehaviour
             dropped = true;
             gameObject.layer = 6;
             rb.bodyType = RigidbodyType2D.Kinematic;
-            rb.velocity = (new Vector2(rb.velocity.x, -gravitySpeed * 1));
+            rb.velocity = (new Vector2(rb.velocity.x, -gravitySpeed * 0.3f));
         }
     }
     private void Update()
