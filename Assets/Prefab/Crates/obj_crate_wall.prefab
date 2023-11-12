@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8247654135983823574}
   - component: {fileID: 4695222520136452044}
   - component: {fileID: 2910368593750693216}
+  - component: {fileID: -4816535989594443012}
   m_Layer: 0
   m_Name: obj_crate_wall
   m_TagString: CrateWall
@@ -130,3 +131,15 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!210 &-4816535989594443012
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6719429577759036885}
+  m_Enabled: 1
+  m_SortingLayerID: -1421104013
+  m_SortingLayer: 2
+  m_SortingOrder: 0
+  m_SortAtRoot: 0

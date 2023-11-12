@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4117058765964000801}
   - component: {fileID: 2633963713875784262}
   - component: {fileID: 8071287625832173890}
+  - component: {fileID: -8763016649364716409}
   m_Layer: 0
   m_Name: obj_crate_horiMove
   m_TagString: CrateHoriMove
@@ -130,3 +131,15 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.2683997, y: 1.4129717}
   m_EdgeRadius: 0
+--- !u!210 &-8763016649364716409
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2607030981203539571}
+  m_Enabled: 1
+  m_SortingLayerID: -1421104013
+  m_SortingLayer: 2
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
