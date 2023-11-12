@@ -15,6 +15,11 @@ public class InGameMenuScript : MonoBehaviour
         GameMenu();
     }
 
+    public void Start()
+    {
+        Time.timeScale = 1;
+    }
+
     public void GameMenu()
     {
         if (Input.GetKeyDown("escape") && GameMenuBool == false)
@@ -42,5 +47,13 @@ public class InGameMenuScript : MonoBehaviour
     public void QuitGame()
     {
         Application.Quit();
+    }
+
+    public void ContinueGame()
+    {
+        GameMenuActivate.SetActive(false);
+        BackgroundActivate.SetActive(false);
+        GameMenuBool = false;
+        Time.timeScale = 1;
     }
 }

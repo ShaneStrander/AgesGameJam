@@ -46,78 +46,84 @@ public class MovementScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        if (!isWallJumping)
+        if (Time.timeScale == 1)
         {
-            horizontal = Input.GetAxisRaw("Horizontal");
-            if (horizontal > 0f || horizontal < 0f)
+            if (!isWallJumping)
             {
-                anim.SetBool("isRunning", true);
-                gameObject.transform.SetParent(null);
+                horizontal = Input.GetAxisRaw("Horizontal");
+                if (horizontal > 0f || horizontal < 0f)
+                {
+                    anim.SetBool("isRunning", true);
+                    gameObject.transform.SetParent(null);
+                }
+                else if (horizontal == 0f)
+                {
+                    anim.SetBool("isRunning", false);
+                }
             }
-            else if (horizontal == 0f)
+            else
             {
+                horizontal = 0f;
                 anim.SetBool("isRunning", false);
             }
-        }
-        else
-        {
-            horizontal = 0f;
-            anim.SetBool("isRunning", false);
-        }
 
-        if (IsGrounded() && !Input.GetButton("Jump"))
-        {
-            doubleJump = false;
-        }
-
-        if (!IsGrounded())
-        {
-            anim.SetBool("isFalling", true);
-        }
-        else
-        {
-            anim.SetBool("isFalling", false);
-        }
-
-        if (Input.GetButtonDown("Jump"))
-        {
-
-            if (IsGrounded() || doubleJump)
+            if (IsGrounded() && !Input.GetButton("Jump"))
             {
-                rb.velocity = new Vector2(rb.velocity.x, doubleJump ? doubleJumpPower : jumpingPower);
-
-                doubleJump = !doubleJump;
-
-                anim.SetTrigger("JumpTrigger");
-
-                gameObject.transform.SetParent(null);
-                audioSource.GetComponent<scr_soundEffects>().playSound(audioSource.GetComponent<scr_soundEffects>().sfJump);
+                doubleJump = false;
             }
-       
+
+            if (!IsGrounded())
+            {
+                anim.SetBool("isFalling", true);
+            }
+            else
+            {
+                anim.SetBool("isFalling", false);
+            }
+
+            if (Input.GetButtonDown("Jump"))
+            {
+
+                if (IsGrounded() || doubleJump)
+                {
+                    rb.velocity = new Vector2(rb.velocity.x, doubleJump ? doubleJumpPower : jumpingPower);
+
+                    doubleJump = !doubleJump;
+
+                    anim.SetTrigger("JumpTrigger");
+
+                    gameObject.transform.SetParent(null);
+                    audioSource.GetComponent<scr_soundEffects>().playSound(audioSource.GetComponent<scr_soundEffects>().sfJump);
+                }
+
+            }
+
+            if (Input.GetButtonUp("Jump") && rb.velocity.y > 0f)
+            {
+                rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
+            }
+
+            WallSlide();
+            WallJump();
+
+            if (!isWallJumping)
+            {
+                Flip();
+            }
+
+            transform.position = new Vector3(transform.position.x + platformOffset.x, transform.position.y, transform.position.z);
         }
         
-        if (Input.GetButtonUp("Jump") && rb.velocity.y > 0f)
-        {
-            rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
-        }
-
-        WallSlide();
-        WallJump();
-        
-        if (!isWallJumping)
-        {
-            Flip();
-        }
-
-        transform.position = new Vector3(transform.position.x + platformOffset.x, transform.position.y, transform.position.z);
 
     }
     private void FixedUpdate()
     {
-        if(!isWallJumping)
+        if (Time.timeScale == 1)
         {
-           rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
+            if (!isWallJumping)
+            {
+                rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
+            }
         }
         
     }
@@ -154,6 +160,7 @@ public class MovementScript : MonoBehaviour
         if (isWalled() && !IsGrounded() && horizontal != 0f)
         {
             isWallSliding = true;
+            doubleJump = false;
             anim.SetBool("isWallSliding", true);
             rb.velocity = new Vector2(rb.velocity.x, Mathf.Clamp(rb.velocity.y, -wallSlideSpeed, float.MaxValue));
         }
