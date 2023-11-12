@@ -34,6 +34,7 @@ public class scr_platTimer : MonoBehaviour
     {
         if (detectPlayer())
         {
+            anim.SetTrigger("Touched");
             //ChangeColor();'
             Debug.Log("AÖLFJSDA_FL");
             hasBeenTouched = true;
@@ -41,15 +42,6 @@ public class scr_platTimer : MonoBehaviour
             Invoke("DisappearPlatform", disappearTime);
           
                 
-        }
-        if(hasBeenTouched)
-        {
-
-            anim.SetTrigger("Touched");
-            elapsedTime += Time.deltaTime;
-            t = Mathf.Clamp01(elapsedTime / disappearTime);
-            Color lerpedColor = Color.Lerp(Color.white, Color.red, t);
-            GetComponent<SpriteRenderer>().color = lerpedColor;
         }
         
     }
