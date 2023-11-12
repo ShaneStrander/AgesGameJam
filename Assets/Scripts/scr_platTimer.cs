@@ -21,6 +21,7 @@ public class scr_platTimer : MonoBehaviour
     {
         coll = GetComponent<BoxCollider2D>();
         GetComponent<SpriteRenderer>().color = Color.white;
+        anim = GetComponent<Animator>();
     }
 
 
