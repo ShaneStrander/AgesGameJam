@@ -34,7 +34,7 @@ public class MovementScript : MonoBehaviour
     [SerializeField] private LayerMask groundLayer;
     [SerializeField] private LayerMask wallLayer;
 
-    private bool isDead = false;
+    public bool isDead = false;
 
     private Animator anim;
 
@@ -242,12 +242,13 @@ public class MovementScript : MonoBehaviour
             audioSource.GetComponent<scr_soundEffects>().playSound(audioSource.GetComponent<scr_soundEffects>().sfDeathSound);
             Invoke("DelayedDeath", 1f);
             isDead = true;
-            Time.timeScale = 0f;
+            
         }
     }
 
     private void DelayedDeath()
     {
         Destroy(gameObject);
+        Time.timeScale = 0f;
     }
 }
