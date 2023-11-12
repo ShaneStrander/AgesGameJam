@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2675431324267959116}
   - component: {fileID: 3789258652352260021}
   - component: {fileID: 5967462174664322462}
+  - component: {fileID: 2969389410346847728}
   m_Layer: 6
   m_Name: vertPlat
   m_TagString: Untagged
@@ -29,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 1619680076347250690}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.0053977733}
+  m_LocalPosition: {x: 0, y: 0, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -194,6 +195,18 @@ MonoBehaviour:
   Speed: 4
   locked: 1
   playerMovementScript: {fileID: 6157158685789273566, guid: c2eeb51855ea9024f9bd1ece22e77c40, type: 3}
+--- !u!210 &2969389410346847728
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1619680076347250690}
+  m_Enabled: 1
+  m_SortingLayerID: -1421104013
+  m_SortingLayer: 2
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &4560719778119555167
 GameObject:
   m_ObjectHideFlags: 0
@@ -360,6 +373,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9056765551243143364}
   - component: {fileID: 8295174092833477719}
+  - component: {fileID: 4557440096574348329}
   m_Layer: 6
   m_Name: guide
   m_TagString: Untagged
@@ -376,7 +390,7 @@ Transform:
   m_GameObject: {fileID: 7572137629880164893}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.0053977733}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.2, y: 6, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -434,6 +448,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!210 &4557440096574348329
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7572137629880164893}
+  m_Enabled: 1
+  m_SortingLayerID: -1421104013
+  m_SortingLayer: 2
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &8584222197444760956
 GameObject:
   m_ObjectHideFlags: 0

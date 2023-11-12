@@ -49,7 +49,7 @@ public class scr_followDropper : MonoBehaviour
                 rb.velocity = Vector3.zero;
                 dropped = true;
                 rb.bodyType = RigidbodyType2D.Kinematic;
-                rb.velocity = (new Vector2(rb.velocity.x, -gravitySpeed*10));
+                rb.velocity = (new Vector2(rb.velocity.x, -gravitySpeed*2));
                 if (gameObject.tag == "HorizontalPlatform" || gameObject.tag == "VerticalPlatform")
                 {
                     gameObject.GetComponentInChildren<MovePlat>().locked = false;
