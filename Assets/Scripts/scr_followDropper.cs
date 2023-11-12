@@ -11,6 +11,7 @@ public class scr_followDropper : MonoBehaviour
     public bool isStart = false;
     public float gravitySpeed = 1f;
     public GameObject platformManager;
+    public GameObject score;
 
     private float moveMultiplier = 10;
     private float jitter = 0.01f;
@@ -86,6 +87,7 @@ public class scr_followDropper : MonoBehaviour
         if(collision.gameObject.tag == "KillZone")
         {
             //Call platform manager spawn crate
+            score.GetComponent<scr_score>().score += 100;
             platformManager.GetComponent<scr_platformManager>().SpawnCrate();
             Destroy(gameObject);
         }

@@ -188,3 +188,4 @@ MonoBehaviour:
   isStart: 0
   gravitySpeed: 1
   platformManager: {fileID: 3506815856657716626, guid: c2eeb51855ea9024f9bd1ece22e77c40, type: 3}
+  score: {fileID: 4806011038663493472, guid: 56335c56652211740860d13157f4e3c4, type: 3}
