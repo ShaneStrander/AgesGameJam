@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4805146990082450397}
   - component: {fileID: 3810934229410840334}
   - component: {fileID: 3891853238600783600}
+  - component: {fileID: -5312993557953348616}
   m_Layer: 0
   m_Name: obj_crate_vertMove
   m_TagString: CrateVertMove
@@ -130,3 +131,15 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.2300947, y: 1.4437542}
   m_EdgeRadius: 0
+--- !u!210 &-5312993557953348616
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7245085542615980047}
+  m_Enabled: 1
+  m_SortingLayerID: -1421104013
+  m_SortingLayer: 2
+  m_SortingOrder: 0
+  m_SortAtRoot: 0

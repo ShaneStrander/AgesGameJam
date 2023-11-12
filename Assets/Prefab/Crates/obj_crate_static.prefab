@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6998970867042236670}
   - component: {fileID: 3890942498165173314}
   - component: {fileID: 3415624299703167726}
+  - component: {fileID: -2843880341461914766}
   m_Layer: 0
   m_Name: obj_crate_static
   m_TagString: CrateStatic
@@ -130,3 +131,15 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.2545335, y: 1.4469546}
   m_EdgeRadius: 0
+--- !u!210 &-2843880341461914766
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6196986851997307043}
+  m_Enabled: 1
+  m_SortingLayerID: -1421104013
+  m_SortingLayer: 2
+  m_SortingOrder: 0
+  m_SortAtRoot: 0

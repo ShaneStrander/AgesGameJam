@@ -192,7 +192,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   posA: {fileID: 4900211603126108115}
   posB: {fileID: 7529858191361617498}
-  Speed: 4
+  Speed: 1
   locked: 1
   playerMovementScript: {fileID: 6157158685789273566, guid: c2eeb51855ea9024f9bd1ece22e77c40, type: 3}
 --- !u!210 &2969389410346847728

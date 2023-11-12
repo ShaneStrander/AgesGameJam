@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4244733997464016853}
   - component: {fileID: 2424552676342197631}
   - component: {fileID: 5481417359293476131}
+  - component: {fileID: -8839892530477479270}
   m_Layer: 0
   m_Name: obj_crate_timer
   m_TagString: CrateTimer
@@ -130,3 +131,15 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.2774286, y: 1.4351047}
   m_EdgeRadius: 0
+--- !u!210 &-8839892530477479270
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6243791668479446374}
+  m_Enabled: 1
+  m_SortingLayerID: -1421104013
+  m_SortingLayer: 2
+  m_SortingOrder: 0
+  m_SortAtRoot: 0

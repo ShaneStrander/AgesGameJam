@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7415191822754633093}
   - component: {fileID: 6124833288130104396}
   - component: {fileID: 1862365311457139233}
+  - component: {fileID: 2291276407338718546}
   m_Layer: 0
   m_Name: Cog
   m_TagString: Untagged
@@ -97,4 +98,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a167c4e04cafb9c409f521c55547196d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RotationSpeed: 24
+  RotationSpeed: 100
+  inverse: 0
+--- !u!210 &2291276407338718546
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1843308822465066497}
+  m_Enabled: 1
+  m_SortingLayerID: -1421104013
+  m_SortingLayer: 2
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
