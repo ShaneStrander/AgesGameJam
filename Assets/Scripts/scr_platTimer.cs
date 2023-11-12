@@ -36,7 +36,6 @@ public class scr_platTimer : MonoBehaviour
         {
             anim.SetTrigger("Touched");
             //ChangeColor();'
-            Debug.Log("AÖLFJSDA_FL");
             hasBeenTouched = true;
 
             Invoke("DisappearPlatform", disappearTime);
