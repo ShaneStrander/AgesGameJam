@@ -235,6 +235,15 @@ public class MovementScript : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        audioSource.GetComponent<scr_soundEffects>().playSound(audioSource.GetComponent<scr_soundEffects>().sfDeathSound);
+        if (collision.gameObject.CompareTag("KillZone"))
+        {
+            audioSource.GetComponent<scr_soundEffects>().playSound(audioSource.GetComponent<scr_soundEffects>().sfDeathSound);
+            Invoke("DelayedDeath", 1f);
+        }
+    }
+
+    private void DelayedDeath()
+    {
+        Destroy(gameObject);
     }
 }
