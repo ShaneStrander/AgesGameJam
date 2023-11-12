@@ -9,6 +9,7 @@ public class scr_invPlatSpawn : MonoBehaviour
     public GameObject audioSource;
     public GameObject platCounter;
     public GameObject score;
+    public GameObject crane;
     public float dropSpeedMultiplier = 0.01f;
     private void OnMouseDown()
     {
@@ -30,6 +31,7 @@ public class scr_invPlatSpawn : MonoBehaviour
         spawnedPlatform.GetComponent<scr_followDropper>().score = score;
         spawnedPlatform.GetComponent<scr_followDropper>().dropSpeedMUltiplier = dropSpeedMultiplier;
         spawnedPlatform.GetComponent<scr_followDropper>().spawner = this.gameObject;
+        spawnedPlatform.GetComponent<scr_followDropper>().crane = this.crane;
         if (spawnedPlatform.TryGetComponent<scr_platBounce>(out scr_platBounce platBounce))
         {
             spawnedPlatform.GetComponent<scr_platBounce>().audioSource = audioSource;

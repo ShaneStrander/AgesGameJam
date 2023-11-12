@@ -152,7 +152,7 @@ Transform:
   m_GameObject: {fileID: 3267265}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -4.33, y: 12.56, z: -156.81349}
+  m_LocalPosition: {x: -4.33, y: 16.9059, z: -156.81349}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -202,18 +202,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -1.9301581, y: -0.2929678}
   m_SpriteTilingProperty:
     border: {x: 0.71, y: 0.93, z: 0.56, w: 1.56}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 1.58, y: 11.66}
-    newSize: {x: 1.4, y: 45.2}
+    newSize: {x: 10.091785, y: 45.2}
     adaptiveTilingThreshold: 0.5
     drawMode: 1
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 4.860317, y: 42.739655}
   m_EdgeRadius: 0
 --- !u!50 &3267269
 Rigidbody2D:
@@ -288,7 +288,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 1
-  m_Size: {x: 1.4, y: 45.2}
+  m_Size: {x: 10.091785, y: 45.2}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -847,8 +847,7 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 3500888252144450663, guid: 0c02d1488c7c65341bcc7e82cb076899, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 3844109553126704499, guid: 0c02d1488c7c65341bcc7e82cb076899, type: 3}
     - {fileID: 5981111070017277381, guid: 0c02d1488c7c65341bcc7e82cb076899, type: 3}
@@ -1377,6 +1376,7 @@ MonoBehaviour:
   audioSource: {fileID: 1134882633}
   platCounter: {fileID: 318586813}
   score: {fileID: 1780523113}
+  crane: {fileID: 612967846}
   dropSpeedMultiplier: 0.01
 --- !u!114 &471064270
 MonoBehaviour:
@@ -1712,6 +1712,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 7415191822754633093, guid: 1f218c085c4d4a94c98534d754bf66d2, type: 3}
   m_PrefabInstance: {fileID: 460751154}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &612967846 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1047877087466068143, guid: a71c769c624bf5c40910d5a732bff2aa, type: 3}
+  m_PrefabInstance: {fileID: 1271519202}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &658719807
 GameObject:
@@ -2676,7 +2681,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba97e1f195a25764daf0ccdb7b115a57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inventoryCount: 0
+  inventoryCount: 34
 --- !u!1 &903800826
 GameObject:
   m_ObjectHideFlags: 0
@@ -2778,6 +2783,7 @@ MonoBehaviour:
   audioSource: {fileID: 1134882633}
   platCounter: {fileID: 127820252}
   score: {fileID: 1780523113}
+  crane: {fileID: 612967846}
   dropSpeedMultiplier: 0.01
 --- !u!114 &903800830
 MonoBehaviour:
@@ -3432,6 +3438,7 @@ MonoBehaviour:
   audioSource: {fileID: 1134882633}
   platCounter: {fileID: 1863574615}
   score: {fileID: 1780523113}
+  crane: {fileID: 612967846}
   dropSpeedMultiplier: 0.01
 --- !u!114 &1061827405
 MonoBehaviour:
@@ -3732,7 +3739,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -17.112087, y: 1.1060944}
+  m_Offset: {x: -18.163307, y: 1.1060944}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -3743,7 +3750,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 33.30139, y: 3.8267193}
+  m_Size: {x: 31.198952, y: 3.8267193}
   m_EdgeRadius: 0
 --- !u!1 &1134882633 stripped
 GameObject:
@@ -4228,7 +4235,7 @@ Transform:
   m_GameObject: {fileID: 1263651799}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.87, y: 11.16, z: 1}
+  m_LocalPosition: {x: 5.25, y: 11.16, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4317,7 +4324,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1957599038217646663, guid: a71c769c624bf5c40910d5a732bff2aa, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 9.57
+      value: 9.51
       objectReference: {fileID: 0}
     - target: {fileID: 1957599038217646663, guid: a71c769c624bf5c40910d5a732bff2aa, type: 3}
       propertyPath: m_LocalPosition.y
@@ -4354,10 +4361,6 @@ PrefabInstance:
     - target: {fileID: 1957599038217646663, guid: a71c769c624bf5c40910d5a732bff2aa, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2406301276608312711, guid: a71c769c624bf5c40910d5a732bff2aa, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 6.1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4616,7 +4619,7 @@ Transform:
   m_GameObject: {fileID: 1285910213}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -8.5, y: 8.94, z: 0}
+  m_LocalPosition: {x: -8.5, y: 8.93, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5353,8 +5356,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -210.37, y: 384.97}
-  m_SizeDelta: {x: 1148.19, y: 139.81}
+  m_AnchoredPosition: {x: -220.5, y: 384.97}
+  m_SizeDelta: {x: 1127.93, y: 139.81}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!210 &1393243741
 SortingGroup:
@@ -5900,6 +5903,7 @@ MonoBehaviour:
   audioSource: {fileID: 1134882633}
   platCounter: {fileID: 1832267114}
   score: {fileID: 1780523113}
+  crane: {fileID: 612967846}
   dropSpeedMultiplier: 0.01
 --- !u!114 &1515035768
 MonoBehaviour:
@@ -6481,6 +6485,7 @@ MonoBehaviour:
   audioSource: {fileID: 1134882633}
   platCounter: {fileID: 894796814}
   score: {fileID: 1780523113}
+  crane: {fileID: 612967846}
   dropSpeedMultiplier: 0.01
 --- !u!114 &1741434981
 MonoBehaviour:
@@ -6847,6 +6852,7 @@ MonoBehaviour:
   audioSource: {fileID: 1134882633}
   platCounter: {fileID: 1192892258}
   score: {fileID: 1780523113}
+  crane: {fileID: 612967846}
   dropSpeedMultiplier: 0.01
 --- !u!114 &1858215893
 MonoBehaviour:

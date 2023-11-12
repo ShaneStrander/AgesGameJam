@@ -12,6 +12,7 @@ public class scr_followDropper : MonoBehaviour
     public GameObject platformManager;
     public GameObject score;
     public GameObject spawner = null;
+    public GameObject crane = null;
 
     public float gravitySpeed = 0.5f;
     public float dropSpeedMUltiplier = 0.05f;
@@ -58,7 +59,7 @@ public class scr_followDropper : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "DropTrigger" && !Input.GetMouseButton(0))
+        if (collision.gameObject.tag == "DropTrigger" && !Input.GetMouseButton(0) && crane.GetComponent<scr_crane>().inDropArea)
         {
             beingHeld = false;
             Rigidbody2D rb = GetComponent<Rigidbody2D>();
