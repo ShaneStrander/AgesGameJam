@@ -24,6 +24,7 @@ public class scr_followDropper : MonoBehaviour
             Debug.Log("DROP");
             rb.velocity = Vector3.zero;
             dropped = true;
+            gameObject.layer = 6;
             rb.bodyType = RigidbodyType2D.Kinematic;
             rb.velocity = (new Vector2(rb.velocity.x, -gravitySpeed * 1));
         }
