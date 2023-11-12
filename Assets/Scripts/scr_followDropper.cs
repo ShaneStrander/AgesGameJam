@@ -8,12 +8,26 @@ public class scr_followDropper : MonoBehaviour
 
     [HideInInspector]
     public bool beingHeld = false;
+    public bool isStart = false;
     public float gravitySpeed = 1f;
     public GameObject platformManager;
 
     private float moveMultiplier = 10;
     private float jitter = 0.01f;
     private bool dropped = false;
+
+    private void Start()
+    {
+        if (isStart)
+        {
+            Rigidbody2D rb = GetComponent<Rigidbody2D>();
+            Debug.Log("DROP");
+            rb.velocity = Vector3.zero;
+            dropped = true;
+            rb.bodyType = RigidbodyType2D.Kinematic;
+            rb.velocity = (new Vector2(rb.velocity.x, -gravitySpeed * 1));
+        }
+    }
     private void Update()
     {
         if (beingHeld)
@@ -49,7 +63,7 @@ public class scr_followDropper : MonoBehaviour
                 rb.velocity = Vector3.zero;
                 dropped = true;
                 rb.bodyType = RigidbodyType2D.Kinematic;
-                rb.velocity = (new Vector2(rb.velocity.x, -gravitySpeed*2));
+                rb.velocity = (new Vector2(rb.velocity.x, -gravitySpeed*1));
                 if (gameObject.tag == "HorizontalPlatform" || gameObject.tag == "VerticalPlatform")
                 {
                     gameObject.GetComponentInChildren<MovePlat>().locked = false;
