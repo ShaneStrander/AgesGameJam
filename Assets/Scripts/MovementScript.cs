@@ -139,7 +139,14 @@ public class MovementScript : MonoBehaviour
 
     private bool isWalled()
     {
-        return Physics2D.BoxCast(coll.bounds.center, coll.bounds.size, 0f, Vector2.right, 0.1f, wallLayer);
+        if (isFacingRight)
+        {
+            return Physics2D.BoxCast(coll.bounds.center, coll.bounds.size, 0f, Vector2.right, 0.1f, wallLayer);
+        }
+        else
+        {
+            return Physics2D.BoxCast(coll.bounds.center, coll.bounds.size, 0f, Vector2.left, 0.1f, wallLayer);
+        }
     }
 
     private void WallSlide()
@@ -147,11 +154,13 @@ public class MovementScript : MonoBehaviour
         if (isWalled() && !IsGrounded() && horizontal != 0f)
         {
             isWallSliding = true;
+            anim.SetBool("isWallSliding", true);
             rb.velocity = new Vector2(rb.velocity.x, Mathf.Clamp(rb.velocity.y, -wallSlideSpeed, float.MaxValue));
         }
         else
         {
             isWallSliding = false;
+            anim.SetBool("isWallSliding", false);
         }
     }
 
