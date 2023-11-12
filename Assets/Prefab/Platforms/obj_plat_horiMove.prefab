@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 413977559417337543}
   - component: {fileID: 1399184535832677475}
   - component: {fileID: 7154503836980428792}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: guide
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -112,7 +112,7 @@ GameObject:
   - component: {fileID: 1529269101286967612}
   - component: {fileID: 8016446506831617801}
   - component: {fileID: 838357458712253474}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: horiPlat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -344,7 +344,7 @@ GameObject:
   - component: {fileID: 1536232530012494746}
   - component: {fileID: 5223832078058229218}
   - component: {fileID: 2216365339490602142}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: obj_plat_horiMove
   m_TagString: HorizontalPlatform
   m_Icon: {fileID: 0}
@@ -383,6 +383,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   beingHeld: 0
+  isStart: 0
   gravitySpeed: 1
   platformManager: {fileID: 3506815856657716626, guid: c2eeb51855ea9024f9bd1ece22e77c40, type: 3}
 --- !u!61 &5223832078058229218
@@ -466,7 +467,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6593896920583741655}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: posB
   m_TagString: Untagged
   m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
@@ -497,7 +498,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8320183420057396212}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: posA
   m_TagString: Untagged
   m_Icon: {fileID: 4422084297763085224, guid: 0000000000000000d000000000000000, type: 0}
