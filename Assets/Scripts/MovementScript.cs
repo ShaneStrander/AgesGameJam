@@ -69,23 +69,27 @@ public class MovementScript : MonoBehaviour
         if (IsGrounded() && !Input.GetButton("Jump"))
         {
             doubleJump = false;
-            anim.SetBool("isJumping", false);
         }
 
         if (!IsGrounded())
         {
-            anim.SetBool("isJumping", false);
+            anim.SetBool("isFalling", true);
+        }
+        else
+        {
+            anim.SetBool("isFalling", false);
         }
 
         if (Input.GetButtonDown("Jump"))
         {
-            anim.SetBool("isJumping", true);
 
             if (IsGrounded() || doubleJump)
             {
                 rb.velocity = new Vector2(rb.velocity.x, doubleJump ? doubleJumpPower : jumpingPower);
 
                 doubleJump = !doubleJump;
+
+                anim.SetTrigger("JumpTrigger");
 
                 gameObject.transform.SetParent(null);
                 audioSource.GetComponent<scr_soundEffects>().playSound(audioSource.GetComponent<scr_soundEffects>().sfJump);
