@@ -12,7 +12,7 @@ public class scr_platformManager : MonoBehaviour
 
     //public List<GameObject> platforms = new List<GameObject>();
     public List<GameObject> platforms;
-    public GameObject[] counters = new GameObject[5];
+    public GameObject[] counters = new GameObject[6];
 
     public void SpawnCrate()
     {
@@ -39,14 +39,19 @@ public class scr_platformManager : MonoBehaviour
             counters[2].GetComponent<scr_platformInventoryCounter>().AddToInventory();
             Destroy(collision.gameObject);
         }
-        else if (collision.CompareTag("CrateHoriMove"))
+        else if (collision.CompareTag("CrateWall"))
         {
             counters[3].GetComponent<scr_platformInventoryCounter>().AddToInventory();
             Destroy(collision.gameObject);
         }
-        else if (collision.CompareTag("CrateVertMove"))
+        else if (collision.CompareTag("CrateHoriMove"))
         {
             counters[4].GetComponent<scr_platformInventoryCounter>().AddToInventory();
+            Destroy(collision.gameObject);
+        }
+        else if (collision.CompareTag("CrateVertMove"))
+        {
+            counters[5].GetComponent<scr_platformInventoryCounter>().AddToInventory();
             Destroy(collision.gameObject);
         }
 

@@ -6,7 +6,7 @@ using UnityEngine.Rendering;
 public class scr_soundEffects : MonoBehaviour
 {
     public AudioSource sound;
-    public AudioClip sfJump, sfBounce, sfBubble, sfButtonSelect, sfCratePop, sfDeathSound;
+    public AudioClip sfJump, sfBounce, sfBubble, sfButtonSelect, sfCratePop, sfDeathSound, sfNoInventory;
     
     public void playSound(AudioClip sfx)
     {

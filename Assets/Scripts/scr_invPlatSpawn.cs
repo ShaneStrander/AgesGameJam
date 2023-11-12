@@ -7,10 +7,18 @@ public class scr_invPlatSpawn : MonoBehaviour
 {
     public GameObject platformType;
     public GameObject audioSource;
+    public GameObject platCounter;
 
     private void OnMouseDown()
     {
-        SpawnPlatform();
+        if (platCounter.GetComponent<scr_platformInventoryCounter>().RemoveFromInventory())
+        {
+            SpawnPlatform();
+        }
+        else
+        {
+            audioSource.GetComponent<scr_soundEffects>().playSound(audioSource.GetComponent<scr_soundEffects>().sfNoInventory);
+        }
     }
 
     public GameObject SpawnPlatform()
