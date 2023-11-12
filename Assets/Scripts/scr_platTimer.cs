@@ -10,6 +10,9 @@ public class scr_platTimer : MonoBehaviour
     private bool hasBeenTouched = false;
     private float t;
 
+    private Animator anim;
+
+
     private BoxCollider2D coll;
 
     [SerializeField] private LayerMask playerLayer;
@@ -18,6 +21,7 @@ public class scr_platTimer : MonoBehaviour
     {
         coll = GetComponent<BoxCollider2D>();
         GetComponent<SpriteRenderer>().color = Color.white;
+        anim = GetComponent<Animator>();
     }
 
 
@@ -40,6 +44,8 @@ public class scr_platTimer : MonoBehaviour
         }
         if(hasBeenTouched)
         {
+
+            anim.SetTrigger("Touched");
             elapsedTime += Time.deltaTime;
             t = Mathf.Clamp01(elapsedTime / disappearTime);
             Color lerpedColor = Color.Lerp(Color.white, Color.red, t);

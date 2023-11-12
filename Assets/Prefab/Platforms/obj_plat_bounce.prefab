@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: -7413924417612334024}
   - component: {fileID: -505936837489259277}
   - component: {fileID: 1122203284864056427}
+  - component: {fileID: -4455937937339450270}
   m_Layer: 9
   m_Name: obj_plat_bounce
   m_TagString: Player
@@ -206,3 +207,24 @@ MonoBehaviour:
   spawner: {fileID: 0}
   gravitySpeed: 0.5
   dropSpeedMUltiplier: 0.05
+--- !u!95 &-4455937937339450270
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4604332762521156831}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0e61ba2d1f90114428bbe19b04116af8, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

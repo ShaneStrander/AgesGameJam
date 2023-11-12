@@ -7,6 +7,15 @@ public class scr_platBounce : MonoBehaviour
     public float bounceForce = 0f;
     [HideInInspector]
     public GameObject audioSource;
+
+    private Animator anim;
+
+    public void Start()
+    {
+        anim = GetComponent<Animator>();
+    }
+
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
@@ -15,6 +24,8 @@ public class scr_platBounce : MonoBehaviour
 
             if (playerRb != null)
             {
+
+                anim.SetTrigger("Touched");
                 // Calculate the bounce direction (you can customize this based on your needs)
                 Vector2 bounceDirection = Vector2.up;
 
