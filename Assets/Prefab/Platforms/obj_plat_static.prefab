@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8496285678125325982}
   - component: {fileID: -5401815301483729407}
   - component: {fileID: 668752447638277719}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: obj_plat_static
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -185,5 +185,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   beingHeld: 0
+  isStart: 0
   gravitySpeed: 1
   platformManager: {fileID: 3506815856657716626, guid: c2eeb51855ea9024f9bd1ece22e77c40, type: 3}

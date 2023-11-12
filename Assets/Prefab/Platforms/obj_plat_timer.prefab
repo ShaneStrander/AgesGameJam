@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -2079479193253036542}
   - component: {fileID: 6351457058715357007}
   - component: {fileID: 4569813380853670646}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: obj_plat_timer
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -201,5 +201,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   beingHeld: 0
+  isStart: 0
   gravitySpeed: 1
   platformManager: {fileID: 3506815856657716626, guid: c2eeb51855ea9024f9bd1ece22e77c40, type: 3}

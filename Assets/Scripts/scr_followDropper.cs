@@ -63,6 +63,11 @@ public class scr_followDropper : MonoBehaviour
                 rb.velocity = Vector3.zero;
                 dropped = true;
                 rb.bodyType = RigidbodyType2D.Kinematic;
+                gameObject.layer = 6;
+                foreach (Transform child in transform)
+                {
+                    child.gameObject.layer = 6;
+                }
                 rb.velocity = (new Vector2(rb.velocity.x, -gravitySpeed*1));
                 if (gameObject.tag == "HorizontalPlatform" || gameObject.tag == "VerticalPlatform")
                 {
